@@ -177,19 +177,14 @@ SIMPLE_JWT = {
 }
 
 # Origins for frontend
-
 CORS_ALLOWED_ORIGINS = os.getenv(
     "CORS_ALLOWED_ORIGINS",
-    "http://localhost:5173,http://127.0.0.1:5173"
+    "http://localhost:5173,http://127.0.0.1:5173,https://task-management-api-gamma-lyart.vercel.app"
 ).split(",")
-
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://.*\.vercel\.app$",
-]
 
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = os.getenv(
     "CSRF_TRUSTED_ORIGINS",
-    "http://localhost:5173"
+    "http://localhost:5173,http://127.0.0.1:5173,https://task-management-api-gamma-lyart.vercel.app"
 ).split(",")
